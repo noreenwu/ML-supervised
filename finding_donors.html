@@ -15188,10 +15188,10 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>The model does its best at predicting which subjects have income greater than 50K and therefore
+<p>Each model does its best at predicting which subjects have income greater than 50K and therefore
 make them good potential donors. But there will be some mis-classifications: sometimes people
 with income under 50K will be classified as earning more than 50K, and sometimes those earning
-more than 50K will be classified as earning less than 50K. All 3 models have an accuracy of about
+more than 50K will be classified as earning less than 50K. All 3 (untuned) models have an accuracy of about
 80%, which means that 80% of the cases were classified correctly. However, when we combine
 the metrics precision and recall, (precision being the percentage of all the people who actually earn
 over 50K out of the total number we flagged as earning over 50K, and recall being the percentage of
@@ -15216,7 +15216,16 @@ SVC and Logistic Regression produced the best results for the full sample size.<
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
+<p><strong>Answer:</strong></p>
+<p>SVC is a popular classification algorithm that tries to divide the data scape by as wide
+a margin as possible. It does this by penalizing values that are categorized incorrectly
+or that are not categorized with enough of a margin from mis-classification. So, dividers
+that are computed to have high error are discarded in favor of those with lower error
+and more wiggle room between the data categories. SVC uses sophisticated algorithms
+to projectthe data points into higher dimensions, in order to discover formulas for dividers
+(that can be circular or blob-like) that maximize the margin of separation of two categories of data points.</p>
+<blockquote><p><a href="https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47">https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47</a></p>
+</blockquote>
 
 </div>
 </div>
